@@ -9,9 +9,6 @@ const assertArraysEqual = function(actual, expected) {
     }
 };
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]);
-assertArraysEqual([1, 1], [2, 5, 8]);
-
 function eqArrays(arr1, arr2) {
 
     for (let i = 0; i < arr1.length; i++) {
