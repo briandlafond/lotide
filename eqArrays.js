@@ -6,17 +6,17 @@ const assertEqual = function(actual, expected) {
     }
 };
 
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-
-function eqArrays(arr1, arr2) {
-
+const eqArrays = function(arr1, arr2) {
     for (let i = 0; i < arr1.length; i++) {
         if (arr1[i] !== arr2[i]) {
             return false;
         }
     }
-    return true
-}
+    return true;
+};
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), true); //arr1 does not equal arr2 -> false !== true
+
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true);
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), true); //arr1 does not equal arr2 -> false !== true

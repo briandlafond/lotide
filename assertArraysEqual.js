@@ -1,3 +1,12 @@
+const eqArrays = function(arr1, arr2) {
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] !== arr2[i]) {
+            return false;
+        }
+    }
+    return true;
+};
+
 const assertArraysEqual = function(actual, expected) {
 
     let isEqual = eqArrays(actual, expected);
@@ -9,12 +18,5 @@ const assertArraysEqual = function(actual, expected) {
     }
 };
 
-function eqArrays(arr1, arr2) {
-
-    for (let i = 0; i < arr1.length; i++) {
-        if (arr1[i] !== arr2[i]) {
-            return false;
-        }
-    }
-    return true
-}
+assertArraysEqual([1, 2, 3], [1, 2, 5]);
+assertArraysEqual([1, 2, 3], [1, 2, 3]);

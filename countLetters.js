@@ -7,18 +7,17 @@ const assertEqual = function(actual, expected) {
 };
 
 const countLetter = function(string) {
-    const results = {}
-    for (letter of string) {
+    const results = {} // empty object to host result
+    for (letter of string) { // loops through string searching for letter
         if (results[letter]) {
-            results[letter] += 1;
-        } else if (string[letter] !== " ") {
-            results[letter] = 1;
+            results[letter] += 1; //increment each found letter, add to results objct
+        } else if (string[letter] !== " ") { // if letter is not whitespace,
+            results[letter] = 1; // add to results object
         }
     }
-    return results;
+    return results; // returns result object
 };
 
-let letterCounter = countLetter('LHL');
-console.log(letterCounter.L);
-console.log(assertEqual(countLetter('LHL')));
-assertEqual(letterCounter.L, 2);
+let testString = 'Brian Daniel LaFond goes to Bootcamp';
+let testResultObject = countLetter(testString);
+console.log(testResultObject);

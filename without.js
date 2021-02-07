@@ -9,15 +9,14 @@ const assertArraysEqual = function(actual, expected) {
     }
 };
 
-function eqArrays(arr1, arr2) {
-
+const eqArrays = function(arr1, arr2) {
     for (let i = 0; i < arr1.length; i++) {
         if (arr1[i] !== arr2[i]) {
             return false;
         }
     }
-    return true
-}
+    return true;
+};
 
 const without = function(source, itemsToRemove) {
     for (let i = 0; i < source.length; i++) {
@@ -25,9 +24,11 @@ const without = function(source, itemsToRemove) {
             if (source[i] === itemsToRemove[j]) {
                 source.splice(i, 1)
             }
-
         }
     }
     console.log(source);
     return source;
-}
+};
+
+without([1, 2, 3], [1]) // => [2, 3]
+without(["1", "2", "3"], [1, 2, "3"]) // => ["1", "2"]
