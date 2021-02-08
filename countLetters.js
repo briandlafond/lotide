@@ -21,3 +21,5 @@ const countLetter = function(string) {
 let testString = 'Brian Daniel LaFond goes to Bootcamp';
 let testResultObject = countLetter(testString);
 console.log(testResultObject);
+
+module.exports = countLetter;

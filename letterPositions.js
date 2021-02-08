@@ -35,3 +35,5 @@ const letterPositions = (sentence) => {
 letterPositions("Brian Daniel LaFond goes to Bootcamp");
 
 assertArraysEqual(letterPositions("hello").e, [1]);
+
+module.exports = letterPositions;
